@@ -47,7 +47,7 @@ gulp.task('watchsass', function() {
 });
 // 先执行监听和编译LESS的任务，然后启动Browsersync，并监听src/路径下所有html、css和js文件（js文件还需要js-hint等前置的任务，可以防止watchjs任务里）
 gulp.task('reload',['watchsass'], function() {
-    browserSync.init({
+    return browserSync.init({
         // 设置监听的文件，以baseDir设置的根目录为起点，单个文件就用字符串，多个文件就用数组
         files: ["src/*.html", "src/css/*.css", "src/js/*.js", "src/images/*.*"],
         // 启动静态服务器，默认监听3000端口，设置文件监听路径为src/

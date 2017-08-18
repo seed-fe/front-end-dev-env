@@ -10,6 +10,7 @@ textarea:focus,
 button:focus {
     outline: none;
 }
+input::-ms-clear{display:none;}
 .clearfix {
 	zoom:1;
 }
